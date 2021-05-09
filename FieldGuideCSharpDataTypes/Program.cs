@@ -19,34 +19,28 @@ namespace FieldGuideCSharpDataTypes
             double totalTrials = experienceYears * trialsPerYear + benchTrials;
             Console.WriteLine($"{totalTrials}\n");
 
-
+            //max & Min of an int
             int intMaxValue = int.MaxValue;
             int intMinValue = int.MinValue;
 
-            Console.WriteLine($"{intMaxValue} + {intMinValue}\n");
+            Console.WriteLine($"{intMaxValue} & {intMinValue}\n");
 
-            char userSelection = 'z';
+            //use a breakpoint at 29 & 30 to watch 'a' change to 'A'
+            char userSelection = 'a';
             char upperVersion = char.ToUpper(userSelection);
-            var chars = new[]
-{
-    'j',
-    '\u007A',
-    '\x008A',
-    (char)109,
-};
-            Console.WriteLine(string.Join(" ", chars));
+            
+            Console.WriteLine(upperVersion);
 
 
 
-            // DateTime yourDateTime = DateTime.UtcNow;
+           //testing the usefulness of DateTime
             DateTime myDateTime = DateTime.Now;
-            DayOfWeek day = myDateTime.DayOfWeek;
-            DateTime yourDay = myDateTime.AddDays(2);
+            DayOfWeek checkDayOfWeek = myDateTime.DayOfWeek;
+            DateTime scheduleEventInTwoDays = myDateTime.AddDays(2);
            
-            DateTime date1 = DateTime.Now;
-            DateTime date2 = DateTime.UtcNow;
-            DateTime date3 = DateTime.Today;
-            Console.WriteLine($" {myDateTime} + {day} + {yourDay} + {date1} + {date2} + {date3}");
+           
+           
+            Console.WriteLine($" \n{myDateTime} is a {checkDayOfWeek}\n\nyour scheduled event is {scheduleEventInTwoDays}, that is, on {scheduleEventInTwoDays.DayOfWeek}");
 
             
             Console.ReadLine();
